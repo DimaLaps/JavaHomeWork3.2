@@ -1,14 +1,14 @@
 public class Main {
     public static void main(String[] args) {
-        double startBalance = 152.55;
+        double balance = 152.55;
         double deposit = 1350.43;
         int multiplicity = 100;
         int coefficient = 1;
         int condition = 1000;
-        long bonus = (long)deposit / multiplicity * coefficient;
-        double finalBalance = startBalance + deposit;
+        int bonus = 0;
         if (deposit >= condition) {
-            finalBalance = startBalance + deposit + bonus;
+            bonus = (int) (deposit / multiplicity * coefficient);
         }
-        System.out.println(finalBalance);
+        balance = balance + deposit + bonus;
+        System.out.println(balance);
     }}
